@@ -14,18 +14,6 @@ function evenOrNot() {
     }
   }
 
-/* Q7: Sum Array Odd */
-function SumOddNumber() {
-	const oddNumber = arguments[0].filter((arg) => {
-		return arg % 2 !== 0;
-	});
-	const result = oddNumber.reduce((sum, num) => {
-		return sum + num;
-	}, 0);
-
-	return result;
-}
-
 /* 
 Examples:
 evenOrNot(1) // => false
