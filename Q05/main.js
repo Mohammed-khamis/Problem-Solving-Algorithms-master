@@ -7,7 +7,28 @@ Have the function FindIntersection(strArr) read the array of strings stored in s
 */
 
 function findIntersection(strArr) {
-  // YOUR CODE HERE
+  const firstArr = strArr[0].split(',');
+	const secondArr = strArr[1].split(',');
+	const intersecArr = [];
+	if (firstArr.length < secondArr.length) {
+		for (let i = 0; i < firstArr.length; i++) {
+			for (let j = 0; j < secondArr.length; j++) {
+				if (firstArr[i] === secondArr[j]) {
+					intersecArr.push(firstArr[i]);
+				}
+			}
+		}
+		return intersecArr;
+	} else {
+		for (let i = 0; i < secondArr.length; i++) {
+			for (let j = 0; j < firstArr.length; j++) {
+				if (secondArr[i] === firstArr[j]) {
+					intersecArr.push(secondArr[i]);
+				}
+			}
+		}
+		return intersecArr.join(',');
+	}
   
 }
 
