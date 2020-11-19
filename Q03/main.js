@@ -7,7 +7,16 @@ Have the function FirstReverse(str) take the str parameter being passed and retu
 */
 
 function firstReverse(str) {
-  // YOUR CODE HERE
+  if (typeof str === 'string') {
+		const words = str.split(' ').reverse();
+		const reversedWords = words.map((word) => {
+			return word.split('').reverse().join('');
+		});
+		str = reversedWords.join(' ');
+		console.log(str);
+	} else {
+		console.log('pass a string please...');
+	}
 }
 
 /* 
