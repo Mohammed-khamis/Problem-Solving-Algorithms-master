@@ -7,7 +7,14 @@ Write a function that returns YES if a number is a power of 2, and NO otherwise.
 */
 
 function isPowerOfTwo() {
-  // YOUR CODE HERE
+  while (arguments[0]) {
+		arguments[0] = arguments[0] / 2;
+		if (arguments[0] === 1) {
+			return 'YES';
+		} else if (arguments[0] < 2) {
+			return 'NO';
+		}
+	}
 }
 
 /* 
