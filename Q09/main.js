@@ -7,7 +7,14 @@ Write a function that returns the length of the longest sequence of 1s in an arr
 */
 
 function longestSequence() {
-  // YOUR CODE HERE
+  if (arguments[0].filter((e) => e === 1).length === 0) {
+		return 'There is no one sequenced';
+	} else {
+		const arr1s = arguments[0].join('').split('0');
+		arr1s.sort();
+		const seq = arr1s.pop().length;
+		return seq;
+	}
 }
 
 /* 
