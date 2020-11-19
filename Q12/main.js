@@ -7,7 +7,12 @@ Write a function that reverses the characters of every word of a sentence. Input
 */
 
 function reverseEachWord() {
-  // YOUR CODE HERE
+  return arguments[0]
+		.split(' ')
+		.map((element) => {
+			return element.split('').reverse().join('');
+		})
+		.join(' ');
 }
 
 /* 
