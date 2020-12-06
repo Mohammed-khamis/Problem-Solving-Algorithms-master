@@ -8,8 +8,21 @@ Your function should return the common characters in the same order that they ap
 Do not return duplicate characters and ignore whitespace in your returned string.
 */
 
-function commonCharacters() {
-  // YOUR CODE HERE
+function commonCharacters(str1, str2) {
+	const arr1 = str1.split('');
+	const arr2 = str2.split('');
+	const commonArr = [];
+	for (let j = 0; j < arr1.length; j++) {
+		for (let i = 0; i < arr2.length; i++) {
+			if (
+				!commonArr.find((item) => arr1[j] === item) &&
+				arr1[j] !== ' ' &&
+				arr2[i] === arr1[j]
+			)
+				commonArr.push(arr1[j]);
+		}
+	}
+	return commonArr.join('');
 }
 
 /* 
