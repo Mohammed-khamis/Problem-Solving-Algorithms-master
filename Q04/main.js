@@ -13,11 +13,23 @@ Have the function usernameValidation(str) take the str parameter being passed an
 If the username is valid then your program should return the string true, otherwise return the string false.
 */
 
-function usernameValidation(str) {
-  // YOUR CODE HERE
+function usernameValidation(str)
+{
+  const speicalChar = [/[!@#$%^&*()+\-=\[\]{};':"\\|,.<>\/?]/];
+  const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  if (str.length > 4 || str.length < 25) {
+    const strArr = str.split("");
+    for (let index = 0; index < speicalChar.length; index++) {
+     
+      
+    }
+  } else {
+    return false;
+  }
 }
 
-/* 
+usernameValidation('aa_');
+/*
 Examples:
 usernameValidation('aa_'); // => false
 usernameValidation('u__hello_world123'); // => true
