@@ -7,8 +7,13 @@ Given an integer, n, return n! (n factorial)
 5! = 5 * 4 * 3 * 2 * 1
 */
 
-function factorial() {
-  // YOUR CODE HERE
+function factorial(num) {
+	let total = 1;
+	for (let i = num; i > 0; i--) {
+		total *= num;
+		num--;
+	}
+	return total;
 }
 
 /* 
