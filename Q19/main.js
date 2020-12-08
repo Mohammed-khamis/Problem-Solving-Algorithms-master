@@ -8,8 +8,18 @@ To simplify the problem, you can assume that both arrays will contain only strin
 */
 
 Array.prototype.isSubsetOf = function (array) {
-  
-}
+	if (this.length === 0) {
+		return true;
+	} else {
+		for (let i = 0; i < this.length; i++) {
+			if (array.includes(this[i])) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
+};
 
 /* 
 Examples:
