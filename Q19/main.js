@@ -8,7 +8,7 @@ To simplify the problem, you can assume that both arrays will contain only strin
 */
 
 Array.prototype.isSubsetOf = function (array) {
-  // YOUR CODE HERE
+  
 }
 
 /* 
